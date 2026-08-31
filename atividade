@@ -1,0 +1,89 @@
+import java.util.Scanner;
+
+public class Main
+{
+   static Scanner tc = new Scanner(System.in);
+    
+	public static void main(String[] args) {
+	    
+	    int opcao;
+	    
+	    do{
+	        System.out.println("\n =====Menu=====");
+	        for(int i = 1; i <= 14; i++){
+            System.out.println(i+ "Questão" +i);
+	        }
+	        System.out.println("0- Sair");
+	        System.out.println("Escolha uma Questão");
+	        opcao = tc.nextInt();
+	        switch (opcao){
+	            case 1:
+	                Questao1();
+	                break;
+	             case 2:
+	                Questao2();
+	                break;  
+	            case 3:
+	                Questao3();
+	                break; 
+	            case 4:
+	                Questão4();
+	                break;
+	             case 5:
+	                Questao5();
+	                break;  
+	              case 6:
+	                Questao6();
+	                break;
+	              case 7:
+	                Questao7();
+	                break;
+	            case 8:
+	                Questao8();
+	                break;   
+	            case 9:
+	                Questao9();
+	                break;  
+	            case 10:
+	                Questao10();
+	                break;   
+	            case 11:
+	                Questao11();
+	                break;   
+	            case 12:
+	                Questao12();
+	                break;   
+	            case 13:
+	                Questao13();
+	                break;   
+	            case 14:
+	                Questao14(); 
+	                break;
+	           case 0:
+	           System.out.println("saindooo..");
+	           break;
+	           default:
+	           System.out.println("opcao invalidada!");
+	          }      
+	        } while (opcao != 0);
+	    }
+	    
+	    static void Questao1(){
+	        int numero1;
+	        int numero2;
+	    
+	    System.out.println("Digite seu primeiro numero");
+	    numero1 = tc.nextInt();
+	    
+	    System.out.println("Digite seu Segundo numero");
+	    numero2 = tc.nextInt();
+	    
+	    double media = (numero1 + numero2) / 2.0;
+	    
+	    System.out.println("sua media é" + media);
+	}
+	static void Questão2(){
+	    
+	    
+  }
+}
