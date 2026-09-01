@@ -11,10 +11,9 @@ public class Main
 	    do{
 	        System.out.println("\n =====Menu=====");
 	        for(int i = 1; i <= 14; i++){
-            System.out.println(i+ "Questão" +i);
 	        }
 	        System.out.println("0- Sair");
-	        System.out.println("Escolha uma Questão");
+	        System.out.print("Escolha uma Questão-");
 	        opcao = tc.nextInt();
 	        switch (opcao){
 	            case 1:
@@ -26,16 +25,16 @@ public class Main
 	            case 3:
 	                Questao3();
 	                break; 
-	            case 4:
+	           case 4:
 	                Questão4();
 	                break;
-	             case 5:
+	           case 5:
 	                Questao5();
 	                break;  
-	              case 6:
+	           case 6:
 	                Questao6();
 	                break;
-	              case 7:
+	           case 7:
 	                Questao7();
 	                break;
 	            case 8:
@@ -46,19 +45,10 @@ public class Main
 	                break;  
 	            case 10:
 	                Questao10();
-	                break;   
+	                break;  
 	            case 11:
 	                Questao11();
 	                break;   
-	            case 12:
-	                Questao12();
-	                break;   
-	            case 13:
-	                Questao13();
-	                break;   
-	            case 14:
-	                Questao14(); 
-	                break;
 	           case 0:
 	           System.out.println("saindooo..");
 	           break;
@@ -68,6 +58,7 @@ public class Main
 	        } while (opcao != 0);
 	    }
 	    
+	    //questao 1 media
 	    static void Questao1(){
 	        int numero1;
 	        int numero2;
@@ -82,8 +73,209 @@ public class Main
 	    
 	    System.out.println("sua media é" + media);
 	}
-	static void Questão2(){
+	
+	////questão 2 maior e menor numero
+	static void Questao2(){
 	    
+        int numero1;
+        int numero2;
+        
+     System.out.println("Digite o primeiro número");
+     numero1 = tc.nextInt();
+     
+     System.out.println("Digite o segundo número");
+     numero2 = tc.nextInt();
+     
+     if(numero1 > numero2){
+         System.out.println("Maior" +numero1);
+         System.out.println("Menor" +numero2);
+     }
+     else if(numero2 > numero1){
+     System.out.println("Maior" +numero2);
+     System.out.println("Menor" +numero1);
+    }
+    else{
+     System.out.println("numeros iguais");
+     }
+	}
+    /////// questão numero 3 verificador de par e impar 
+	static void Questao3(){
 	    
-  }
+	    int numero;
+	    
+	    System.out.println("digite seu numero");
+	    numero = tc.nextInt();
+	    if(numero % 2 == 0){
+	        System.out.println("O numero é par");
+	    }
+	    else{
+	        System.out.println("O numero é impar");
+	    }
+	}
+	///calculo idade
+	
+	static void Questão4(){
+	    int anoNascimento;
+	    int anoAtual = 2026;
+	    
+	    System.out.println("Digite sua data de nascimeto");
+	    anoNascimento = tc.nextInt();
+	    
+	    int idade = anoAtual - anoNascimento;
+	    
+	    System.out.println("Sua idade é\n"+idade+ "anos");
+	}
+	static void Questao5(){
+	    int numero;
+	    
+	    System.out.println("Digite seu numero");
+	    numero = tc.nextInt();
+	    
+	    int sucessor = numero + 1;
+	    int antecessor = numero - 1;
+	    
+	    System.out.println("antecessor\n" +antecessor);
+	    System.out.println("sucessor\n" +sucessor);
+	    
+	}
+	static void Questao6(){
+	    String nome;
+	    double nota1, nota2, nota3;
+	    tc.nextLine();
+	    
+	    System.out.println("Digite Seu nome");
+	    nome = tc.nextLine();
+	    
+	    System.out.println("Digite sua primeira nota");
+	    nota1 = tc.nextDouble();
+	    
+	    System.out.println("Digite sua segunda nota");
+	    nota2 = tc.nextDouble();
+	    
+	    System.out.println("Digite sua terceira nota");
+	    nota3 = tc.nextDouble();
+	    
+	    /////calculo de mediaa
+	    double media = (nota1 + nota2 + nota3) /3.0;
+	    
+	    System.out.println("Aluno(a)\n" +nome);
+	    System.out.println("sua media é\n" +media);
+	    
+	    if(media >= 7){
+	        System.out.println("aprovado");
+	    }
+	    else{
+	        System.out.println("reprovado");
+	    }
+	}
+	///processamento de 20 alunos 
+	
+	static void Questao7(){
+	    String[] Aluno = new String[20];
+	    double[] medias= new double[20];
+	    
+	    tc.nextLine();
+	    
+	    for(int i= 0; i < 20; i++){
+	        System.out.println("Digite o nome do Aluno" + (i+ 1));
+	        Aluno[i] = tc.nextLine();
+	        
+	        System.out.println("Digite a media do Aluno" + (i+1));
+	        medias[i] = tc.nextDouble();
+	        tc.nextLine();
+	    }
+	    System.out.println("\nAlunos com medias acima de 8.0");
+	    for(int i = 0; i <20; i++){
+	        if(medias[i] > 8.0){
+	            System.out.println(Aluno[i] + "e" +medias[i]);
+	        }
+	    }
+	   
+ }
+        static void Questao8(){
+	    int[] numero = new int [80];
+	    int contador = 0;
+	    
+	    for(int i = 1; i <= 80; i++){
+	        System.out.println("Digite um numero" +i);
+	        numero [i] = tc.nextInt();
+	        
+	        if(numero [i] >= 10 && numero[i] <= 150){
+	            contador++;
+	        }
+	    }
+	    System.out.println("QUANTIDADE DE NUMERO ENTRE 10  E 150 É:" +contador);
+    }
+    //////salario  e comissao do vendedor
+     static void Questao9(){
+         
+         String vendedor;
+         double salario;
+         double vendaTotal;
+         
+         tc.nextLine();
+         
+         System.out.println("Digite nome do vendedor");
+         vendedor = tc.nextLine();
+         
+         System.out.println("Digite salario");
+         salario = tc.nextDouble();
+         
+         System.out.println("Digite total de vendas");
+         vendaTotal = tc.nextDouble();
+         
+         Double comissao = vendaTotal * 0.15;
+         Double salarioFinal = salario + comissao;
+         
+         System.out.println("Nome do vendedor\n" + vendedor);
+         System.out.println("salario fixo\nR$" + salario);
+         System.out.println("Sálario final de Mês\nR$"+ salarioFinal);
+         
+     }
+     static void Questao10(){
+         int numero;
+         int pares = 0;
+         int impares = 0;
+         
+         for(int i =1 ; i <= 10; i++){
+             System.out.println("Digite o numero" +i);
+             numero = tc.nextInt();
+             
+             if(numero % 2 == 0){
+                 pares++;
+             }
+             else{
+                 impares++;
+             }
+         }
+         System.out.println("Quantidade de pares-" + pares);
+         System.out.println("Quantidade de impares-" + impares);
+     }
+     static void Questao11(){
+         int numero;
+         int somaPares = 0;
+         int somaImpares = 0;
+         int QuantidadeImpares = 0;
+         
+         for(int i =1; i <=10; i++){
+             System.out.println("Digite seu numero");
+             numero = tc.nextInt();
+             
+             if(numero %2 == 0){
+                 somaPares += numero;
+             }
+             else{
+                 somaImpares += numero;
+                 QuantidadeImpares++;
+             }
+         }
+         System.out.println("Soma dos pares:" + somaPares);
+         if(QuantidadeImpares >0 ){
+             double mediaImpares = (double) somaImpares / QuantidadeImpares;
+             System.out.println("a Média dos numero impares-" +mediaImpares);
+         }
+         else{
+             System.out.println("nenhum numero impar encontrado");
+         }
+     }
 }
