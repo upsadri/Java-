@@ -49,6 +49,15 @@ public class Main
 	            case 11:
 	                Questao11();
 	                break;   
+	           case 12:
+	                Questao12();
+	                break;  
+	           case 13:
+	                Questao13();
+	                break; 
+	           case 14:
+	                Questao14();
+	                break; 
 	           case 0:
 	           System.out.println("saindooo..");
 	           break;
@@ -278,4 +287,34 @@ public class Main
              System.out.println("nenhum numero impar encontrado");
          }
      }
+     static void Questao12(){
+         int numero;
+         int somaPositivos = 0;
+         int quantidadenegativos = 0;
+         
+         for(int i=1; i <= 50; i++){
+             System.out.println("Digite numero" +i);
+             numero = tc.nextInt();
+             
+             if(numero >0){
+                 somaPositivos+= numero;
+             }
+             else if(numero <0){
+                 quantidadenegativos++;
+             }
+         }
+         System.out.println("soma dos positivos" +somaPositivos);
+         System.out.println("quantida de negativos" +quantidadenegativos);
+     }
+     static void Questao13(){
+         int soma = 0;
+         for(int i = 86; i <= 907; i +=2){
+             System.out.println(i);
+             soma+= i;
+         }
+     System.out.println("soma dos pares-" +soma);
+}
+       static void Questao14(){
+           
+
 }
